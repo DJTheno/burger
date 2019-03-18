@@ -1,14 +1,16 @@
 var connection = require('./connection.js');
 
 var orm ={
-  selectAll: function(table, callback){
-    var queryString = 'SELECT * FROM ' + table;
+  selectAll: function(table,Name){
+    var query = 'SELECT * FROM ' ??;
 
-    connection.query(queryString, function(err, data){
-      if(err) throw err;
-      callback(data);
-    });
-  },
+    connection.query(query([tableName], (err, dbResult)=> {
+      if (err)
+      console.err("could not select all from")
+    })
+    )},
+    
+  
 
   insertOne: function(table, column, burgerInput, callback){
     var queryString = 'INSERT INTO ' + table + '(' + column + ') VALUES (?)';

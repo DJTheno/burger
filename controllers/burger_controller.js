@@ -1,9 +1,9 @@
 var express = require('express')
 var router = express.Router()
-var burger = require('../models/burger.js')
-var handlebars = require('express-handlebars')
+var orm = require("../config/orm")
 
-router.get('/', function (req, res) {
+router.get('/burgers', function (req, res) {
+  res.send("you have hit the git route ")
   // create an object that holds information from both the burger and menu table
   var info = {
     brgr: []
